@@ -1,0 +1,145 @@
+---
+title: "Teaching Data Science Short Course:Outline"
+author: "Danny Kaplan"
+date: "December 29, 2015"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# To-Do for DTK
+
+1. set up an RStudio server.  See [Nick's blog post](http://sas-and-r.blogspot.com/2014/12/rstudio-in-cloud-for-dummies-20142015.html)
+    - Can I get a Pro license from RStudio?
+    - [digital ocean](http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/)
+    - Webfaction
+    - [A shiny server on webfaction?](http://snarglr.com/s/2013/10/shiny-server-on-webfaction.php)
+2. set up the web site for this short course: InstructorWorkshop on GitHub
+3. pull down materials from [CVC](https://github.com/dtkaplan/CVC/tree/gh-pages/Summer2015)
+
+# Resources
+
+1. Package of data `devtools::install_github("InstructorWorkshop/InstructorWorkshop")"
+4. RPubs site: <rpubs.com/USCOTS-2015> login `USCOTS-2015` password `benchtree`
+
+# Topics
+
+* Monday AM
+    - RStudio and markdown
+    - A data-wrangling intro: Moby Dick
+    - Statistics with mosaic
+* Monday PM
+    - Grammar of graphics
+    - Wrangling for glyph-ready data
+        - activity popularity of names
+    - Your own project
+* Tuesday AM
+    - More on wrangling
+    - The Economist graphic
+    - Data scraping: weather, El Nino?
+* Tuesday PM
+    - modeling including regression, smoothing, tree-based models
+
+# Introduction
+
+1. Settling in    
+    * Introduce yourself to your neighbor.
+    * Correct (or add in) information about you on [this Google Doc](https://docs.google.com/document/d/1EKuYDy2IfW9oYIrtXizokP4u8xaeVdfb0AU6jOb4SoQ/edit?usp=sharing)
+    * If you are an R novice and both of your nearest neighbors are R novices too, one of you should move.
+    * If you are quite comfortable with R and both of your nearest neighbors are too, one of you should move.
+2. Installing R, RStudio and the packages (will `DataComputing` do it?), rticles, knitr, markdown, devtools, ggplot2, ...
+3. What packages do you use?
+4. Quiz: Compute means conditional on some categorical variable.  Example in mosaic and in dplyr.
+
+# Starting with R/RStudio
+
+1. Writing an RMD file.  What data do you want to look at?
+#. Using the template from DataComputing
+#. Adding R chunks
+    - Compile early and often
+    - Avoid using the console except for trivial purposes.  Run statements from within a chunk.  Keyboard shortcuts.
+#. Autofill, help, 
+
+# Introduction to the language
+
+1. Five basic types
+    * functions
+    * arguments
+    * data tables
+    * constants
+    * variables 
+2. The idea of a mini-language
+    * mosaic
+    * ggplot
+    * dplyr
+    
+# MOSAIC
+
+A mini-language for    
+* simplifying statistical modeling
+* probability simulations, especially bootstrapping and permutation tests
+
+Notes: <MOSAIC/Modeling.html>
+
+Activity: [Untangling house prices](MOSAIC/UntanglingHousePrices.pdf)
+
+
+
+
+# Topics from DCF course
+
+# Machine learning: Tree-based models
+
+1. tree
+2. prune
+
+
+# Natural language processing
+
+* Script from "Love Actually" from RBloggers
+* Sentiment analysis from RBloggers
+* Google trends
+* Moby Dick
+* Beyonce songs --- talk to Milo
+
+# Teaching intro stats with mosaic
+
+1 hour for an intro to statistical modeling
+
+# Finding packages in your own field
+
+Let's work with some examples.
+
+# Logistics of Teaching
+
+1. Handing in files
+2. Providing files to your students
+3. Creating a minimal package, with just data
+4. Using the Rmd includer from DataComputing
+
+# Mike Sutherland discussion
+
+Pat McDonald --- main contact down at Saratoga
+Donald O'Shea --- president of New College, knows George Cobb
+
+Schedule:    
+- 
+
+Audience:    
+- 24 people
+    * political science, social science types who use STATA
+    * SPSS
+
+Materials:
+- Data Computing
+- Start Teaching in R
+- Student's Guide to R
+- MOSAIC vignette
+
+Relaxing and waiting for them to pitch questions after we show them the basics.    
+- one-morning introduction to the technicalities
+- Mike will send me some data from the participants
+
+

@@ -1,0 +1,220 @@
+---
+title: "Beyonce"
+author: "Miles Ott"
+date: "7/9/2014"
+output: html_document
+---
+
+```{r include=FALSE}
+require(dplyr)
+require(ggplot2)
+require(RCurl)
+require(stringr)
+require(httr)
+```
+
+This gets the lyrics url and the track name and puts it into a datafram called Tracks
+
+```{r}
+urls<-c("03 Bonnie & Clyde", "lyrics/beyonceknowles/03bonnieclyde.html",
+"(Hes) My Man", "lyrics/beyonceknowles/hesmyman.html",
+"1+1", "lyrics/beyonceknowles/11.html",
+"632-5792", "lyrics/beyonceknowles/6325792.html",
+"A Woman Like Me", "lyrics/beyonceknowles/awomanlikeme.html",
+"After All Is Said And Done", "lyrics/beyonceknowles/afterallissaidanddone.html",
+"All I Could Do Was Cry", "lyrics/beyonceknowles/allicoulddowascry.html",
+"Amor Gitano", "lyrics/beyonceknowles/amorgitano.html",
+"At Last", "lyrics/beyonceknowles/atlast.html",
+"Ave Maria", "lyrics/beyonceknowles/avemaria.html",
+"Baby Boy", "lyrics/beyonceknowles/babyboy.html",
+"Back To Black", "lyrics/beyonceknowles/backtoblack.html",
+"Back Up", "lyrics/beyonceknowles/backup.html",
+"Be With You", "lyrics/beyonceknowles/bewithyou.html",
+"Beautiful Liar", "lyrics/beyonceknowles/beautifulliar.html",
+"Bello Embustero", "lyrics/beyonceknowles/belloembustero.html",
+"Best Thing I Never Had", "lyrics/beyonceknowles/bestthingineverhad.html",
+"Beyonce Interlude", "lyrics/beyonceknowles/beyonceinterlude.html",
+"Black Culture", "lyrics/beyonceknowles/blackculture.html",
+"Blow", "lyrics/beyonceknowles/blow.html",
+"Blue", "lyrics/beyonceknowles/blue.html",
+"Bow Down I Been On", "lyrics/beyonceknowles/bowdownibeenon.html",
+"Broken-Hearted Girl", "lyrics/beyonceknowles/brokenheartedgirl.html",
+"Cards Never Lie", "lyrics/beyonceknowles/cardsneverlie.html",
+"Check On It", "lyrics/beyonceknowles/checkonit.html",
+"Closer I Get To You", "lyrics/beyonceknowles/closerigettoyou.html",
+"Control", "lyrics/beyonceknowles/control.html",
+"Countdown", "lyrics/beyonceknowles/countdown.html",
+"Crazy In Love", "lyrics/beyonceknowles/crazyinlove.html",
+"Creole", "lyrics/beyonceknowles/creole.html",
+"Daddy", "lyrics/beyonceknowles/daddy.html",
+"Dance For You", "lyrics/beyonceknowles/danceforyou.html",
+"Dangerously In Love 2", "lyrics/beyonceknowles/dangerouslyinlove2.html",
+"Déjà Vu", "lyrics/beyonceknowles/djvu.html",
+"Disappear", "lyrics/beyonceknowles/disappear.html",
+"Diva", "lyrics/beyonceknowles/diva.html",
+"Dreaming", "lyrics/beyonceknowles/dreaming.html",
+"Drunk In Love", "lyrics/beyonceknowles/drunkinlove.html",
+"Ego (Remix)", "lyrics/beyonceknowles/egoremix.html",
+"Encore For The Fans", "lyrics/beyonceknowles/encoreforthefans.html",
+"End Of Time", "lyrics/beyonceknowles/tilltheendoftime.html",
+"Everything I Do", "lyrics/beyonceknowles/everythingido.html",
+"Fever", "lyrics/beyonceknowles/fever.html",
+"Fighting Temptations", "lyrics/beyonceknowles/fightingtemptations.html",
+"Flawless", "lyrics/beyonceknowles/flawless.html",
+"Flaws And All", "lyrics/beyonceknowles/flawsandall.html",
+"Freakum Dress", "lyrics/beyonceknowles/freakumdress.html",
+"Get Me Bodied", "lyrics/beyonceknowles/getmebodied.html",
+"Ghost / Haunted", "lyrics/beyonceknowles/ghosthaunted.html",
+"Gift From Virgo", "lyrics/beyonceknowles/giftfromvirgo.html",
+"God Bless The U.S.A.", "lyrics/beyonceknowles/godblesstheusa.html",
+"God Made You Beautiful", "lyrics/beyonceknowles/godmadeyoubeautiful.html",
+"Green Light", "lyrics/beyonceknowles/greenlight.html",
+"Grown Woman", "lyrics/beyonceknowles/grownwoman.html",
+"Halo", "lyrics/beyonceknowles/halo.html", 
+"Have Your Way", "lyrics/beyonceknowles/haveyourway.html",
+"He Still Loves Me", "lyrics/beyonceknowles/hestilllovesme.html",
+"Heaven", "lyrics/beyonceknowles/heaven.html",
+"Hello", "lyrics/beyonceknowles/hello.html",
+"Hip Hop Star", "lyrics/beyonceknowles/hiphopstar.html",
+"Honesty", "lyrics/beyonceknowles/honesty.html",
+"I Been On (Remix)", "lyrics/beyonceknowles/ibeenonremix.html",
+"I Can't Take No More", "lyrics/beyonceknowles/icanttakenomore.html",
+"I Care", "lyrics/beyonceknowles/icare.html",
+"I Miss You", "lyrics/beyonceknowles/imissyou.html",
+"I Was Here", "lyrics/beyonceknowles/iwashere.html",
+"Id Rather Go Blind", "lyrics/beyonceknowles/idrathergoblind.html",
+"Im Alone Now", "lyrics/beyonceknowles/imalonenow.html",
+"Im Leaving", "lyrics/beyonceknowles/imleaving.html",
+"Ice Cream Truck", "lyrics/beyonceknowles/icecreamtruck.html",
+"If", "lyrics/beyonceknowles/if.html",
+"If I Were A Boy", "lyrics/beyonceknowles/ifiwereaboy.html",
+"If Looks Could Kill (You Would Be Dead)", "lyrics/beyonceknowles/iflookscouldkillyouwouldbedead.html",
+"In Da Club", "lyrics/beyonceknowles/indaclub.html",
+"In This World", "lyrics/beyonceknowles/inthisworld.html",
+"Irreplaceable", "lyrics/beyonceknowles/irreplaceable.html",
+"Jealous", "lyrics/beyonceknowles/jealous.html",
+"Keep Giving Your Love To Me", "lyrics/beyonceknowles/keepgivingyourlovetome.html",
+"Kick Him Out (Next Ex)", "lyrics/beyonceknowles/kickhimoutnextex.html",
+"Kitty Kat", "lyrics/beyonceknowles/kittykat.html",
+"Lay Up Under Me", "lyrics/beyonceknowles/layupunderme.html",
+"Listen", "lyrics/beyonceknowles/listen.html",
+"Lost Yo Mind", "lyrics/beyonceknowles/lostyomind.html",
+"Love On Top", "lyrics/beyonceknowles/loveontop.html",
+"Me, Myself & I", "lyrics/beyonceknowles/memyselfi.html",
+"Mine", "lyrics/beyonceknowles/mine.html",
+"Move Your Body", "lyrics/beyonceknowles/moveyourbody.html",
+"Naughty Girl", "lyrics/beyonceknowles/naughtygirl.html",
+"New Shoes (Postcard)", "lyrics/beyonceknowles/newshoespostcard.html",
+"No Angel", "lyrics/beyonceknowles/noangel.html",
+"Once In A Lifetime", "lyrics/beyonceknowles/onceinalifetime.html",
+"Oye", "lyrics/beyonceknowles/oye.html",
+"Partition (Remix)", "lyrics/beyonceknowles/partitionremix.html",
+"Party", "lyrics/beyonceknowles/party.html",
+"Poison", "lyrics/beyonceknowles/poison.html",
+"Pretty Hurts", "lyrics/beyonceknowles/prettyhurts.html",
+"Radio", "lyrics/beyonceknowles/radio.html",
+"Rather Die Young", "lyrics/beyonceknowles/ratherdieyoung.html",
+"Resentment", "lyrics/beyonceknowles/resentment.html",
+"Ring The Alarm", "lyrics/beyonceknowles/ringthealarm.html",
+"Rise Up", "lyrics/beyonceknowles/riseup.html",
+"Roc", "lyrics/beyonceknowles/roc.html",
+"Rocket", "lyrics/beyonceknowles/rocket.html",
+"Run The World (Girls)", "lyrics/beyonceknowles/girlswhoruntheworld.html",
+"Satellites", "lyrics/beyonceknowles/satellites.html",
+"Save The Hero", "lyrics/beyonceknowles/savethehero.html",
+"Scared Of Lonely", "lyrics/beyonceknowles/scaredoflonely.html",
+"Schoolin Life", "lyrics/beyonceknowles/schoolinlife.html",
+"Settle 4 U", "lyrics/beyonceknowles/settle4u.html",
+"Should Have / Now I Know (Forever To Bleed)", "lyrics/beyonceknowles/shouldhavenowiknowforevertobleed.html",
+"Si Yo Fuera Un Chico", "lyrics/beyonceknowles/siyofueraunchico.html",
+"Signs", "lyrics/beyonceknowles/signs.html",
+"Single Ladies (Put A Ring On It)", "lyrics/beyonceknowles/singleladiesputaringonit.html",
+"Slow Love", "lyrics/beyonceknowles/slowlove.html",
+"Smash Into You", "lyrics/beyonceknowles/smashintoyou.html",
+"So Amazing", "lyrics/beyonceknowles/soamazing.html",
+"Speechless", "lyrics/beyonceknowles/speechless.html",
+"Standing On The Sun", "lyrics/beyonceknowles/standingonthesun.html",
+"Start Over", "lyrics/beyonceknowles/startover.html",
+"Still In Love (Kissing You)", "lyrics/beyonceknowles/stillinlovekissingyou.html",
+"Stop Sign", "lyrics/beyonceknowles/stopsign.html",
+"Stop That!", "lyrics/beyonceknowles/stopthat.html",
+"Suga Mama", "lyrics/beyonceknowles/sugamama.html",
+"Summertime", "lyrics/beyonceknowles/summertime.html",
+"Superpower", "lyrics/beyonceknowles/superpower.html",
+"Sweet Dreams", "lyrics/beyonceknowles/sweetdreams.html",
+"Swing Low, Sweet Chariot", "lyrics/beyonceknowles/swinglowsweetchariot.html",
+"Thats How You Like It", "lyrics/beyonceknowles/thatshowyoulikeit.html",
+"Thats Why Youre Beautiful", "lyrics/beyonceknowles/thatswhyyourebeautiful.html",
+"The Last Great Seduction", "lyrics/beyonceknowles/thelastgreatseduction.html",
+"Time To Come Home", "lyrics/beyonceknowles/timetocomehome.html",
+"Upgrade U", "lyrics/beyonceknowles/upgradeu.html",
+"Video Phone", "lyrics/beyonceknowles/videophone.html",
+"Waiting", "lyrics/beyonceknowles/waiting.html",
+"Welcome To Hollywood", "lyrics/beyonceknowles/welcometohollywood.html",
+"Whats Good With You?", "lyrics/beyonceknowles/whatsgoodwithyou.html",
+"Why Dont You Love Me?", "lyrics/beyonceknowles/whydontyouloveme.html",
+"Wishing On A Star", "lyrics/beyonceknowles/wishingonastar.html",
+"Work It Out", "lyrics/beyonceknowles/workitout.html",
+"World Wide Women", "lyrics/beyonceknowles/worldwidewomen.html",
+"XO", "lyrics/beyonceknowles/xo.html", 
+"Yes", "lyrics/beyonceknowles/yes.html",
+"Yoncé / Partition", "lyrics/beyonceknowles/yoncpartition.html",
+"You Are My Rock", "lyrics/beyonceknowles/youaremyrock.html")
+
+
+Tracks <- data.frame( url=urls[seq(2,length(urls),by=2)], track=urls[seq(1,length(urls),by=2)])
+Tracks$url<-paste0("www.azlyrics.com/",Tracks$url)
+
+tail(Tracks)
+```
+
+
+```{r}
+a<-NULL
+a<-getURL(Tracks[10,1])
+```
+
+
+## Read one track
+```{r}
+
+read.one.track<-function(url, track){
+
+foo<-getURL(url)
+starter<-"<!-- start of lyrics -->"
+ender<-"<!-- end of lyrics -->"
+
+s.place<-str_locate(foo,starter)
+e.place<-str_locate(foo,ender)
+lyrics<-substr(foo, (s.place[2]+1), (e.place[1]-1))
+real.try<-gsub('\n|\r|<i>|</i>|<br />|\\[.*\\]'," ", lyrics, perl=TRUE)
+words<-unlist(strsplit(real.try, ' |\\.|,|!|\\)|\\(|"',perl=TRUE))
+words<-tolower(words[words!=""])
+
+W<-data.frame(one=words) %>% mutate(two=lead(one), three=lead(one,n=2L), track=track)
+return(W)  
+}
+
+read.one.track(Tracks$url[5], Tracks$track[5])
+
+```
+
+
+
+```{r}
+res <- NULL
+for (k in 1:nrow(Tracks)){
+  T <- with(Tracks,read.one.track(url[k],as.character(track[k])))
+  res <- rbind(res,T)
+}
+BeyonceWords <- res
+write.csv(BeyonceWords,file='BWordCount.csv',row.names=FALSE)
+head(res,50)
+
+```
+
+
+```{r}
+res %>% group_by(one,two,three) %>% summarise( count=n()) %>% arrange(desc(count))->phrase.3
+head(phrase.3,50)
+```
