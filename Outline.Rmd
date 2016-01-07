@@ -9,20 +9,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# To-Do for DTK
-
-1. set up an RStudio server.  See [Nick's blog post](http://sas-and-r.blogspot.com/2014/12/rstudio-in-cloud-for-dummies-20142015.html)
-    - Can I get a Pro license from RStudio?
-    - [digital ocean](http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/)
-    - Webfaction
-    - [A shiny server on webfaction?](http://snarglr.com/s/2013/10/shiny-server-on-webfaction.php)
-2. set up the web site for this short course: InstructorWorkshop on GitHub
-3. pull down materials from [CVC](https://github.com/dtkaplan/CVC/tree/gh-pages/Summer2015)
-
-# Resources
-
-1. Package of data `devtools::install_github("InstructorWorkshop/InstructorWorkshop")"
-4. RPubs site: <rpubs.com/USCOTS-2015> login `USCOTS-2015` password `benchtree`
 
 # Topics
 
@@ -143,3 +129,18 @@ Relaxing and waiting for them to pitch questions after we show them the basics.
 - Mike will send me some data from the participants
 
 
+
+# To-Do for DTK
+
+1. set up an RStudio server.  See [Nick's blog post](http://sas-and-r.blogspot.com/2014/12/rstudio-in-cloud-for-dummies-20142015.html)
+    - Can I get a Pro license from RStudio?
+    - [digital ocean](http://deanattali.com/2015/05/09/setup-rstudio-shiny-server-digital-ocean/)
+    - Webfaction
+    - [A shiny server on webfaction?](http://snarglr.com/s/2013/10/shiny-server-on-webfaction.php)
+2. DONE set up the web site for this short course: InstructorWorkshop on GitHub
+3. pull down materials from [CVC](https://github.com/dtkaplan/CVC/tree/gh-pages/Summer2015)
+
+# Resources
+
+1. Package of data `devtools::install_github("InstructorWorkshop/InstructorWorkshop")"
+4. RPubs site: <rpubs.com/USCOTS-2015> login `USCOTS-2015` password `benchtree`

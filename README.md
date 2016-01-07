@@ -7,19 +7,21 @@
 * 9:00AM           coffee
 * 9:30-11:30     instructional session
     - The R ecosystem: RStudio, RMD, `mosaic`, `dplyr`, `ggplot2`, ...
-    - Statistical modeling
-        - How much is a fireplace worth? ^[Maybe less in FL than MN!] [Write-up](MOSAIC/UntanglingHousePrices.pdf)
-    - Resampling and inference
-    - Grammar of Graphics
+        - [Notes](MOSAIC/StartingRandMOSAIC.html) and their [Rmd sources](MOSAIC/StartingRandMOSAIC.Rmd)
+    - Modeling, Resampling and Inference
+        - Model Formulas [notes]() NEED TO WRITE THESE based on Swimming data
+        - Quick start on inference [notes](Modeling.html) NEED TO SHORTEN THESE
+    - Grammar of Graphics GET THESE FROM DCF NOTES
 * 11:30-1:00     catered lunch
 * 1:00-2:30        instructional session
     - Basics of wrangling with `dplyr`
     - Glyph-ready data
         - Baby names
-    - Treating text as text
+    - Treating text as text. [Moby Dick](MobyDick/notes.html)
 * 2:30-3:00        break
 * 3:30-4:30        workshop
     - Identifying your own project or working on one from the book.
+     - How much is a fireplace worth? ^[Maybe less in FL than MN!] [Write-up](MOSAIC/UntanglingHousePrices.pdf)
 
 #### Tuesday January 2, 2016
 
