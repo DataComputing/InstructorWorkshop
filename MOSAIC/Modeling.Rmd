@@ -32,19 +32,19 @@ sample( Whickham, size=5 )
 ```
 
 ```{r}
-smod <- glm( outcome=='Alive' ~ age*smoker, family='binomial',
-             data=Whickham)
+smod <- glm( outcome == 'Alive' ~ age * smoker, family = "binomial",
+             data = Whickham)
 f <- makeFun(smod) # EXTRACT THE FUNCTION
 ```
 
 Evaluation ... For a 60-year old ...
 ```{r}
-f( age=60, smoker=c('Yes'))
+f( age=60, smoker = c("Yes"))
 ``` 
 
 ### Plot data and the functional form
 ```{r}
-xyplot( outcome=='Alive' ~ age | smoker, data=Whickham,
+xyplot( outcome == "Alive" ~ age | smoker, data = Whickham,
         pch=20, alpha=.2 )
 
 plotFun( f(age=age, smoker="No") ~ age, add=TRUE)
@@ -55,7 +55,7 @@ plotFun( f(age=age, smoker="Yes") ~ age, add=TRUE,
 ### lm()
 
 ```{r}
-hmod <- lm( height ~ father, data=subset(Galton,sex=="M"))
+hmod <- lm( height ~ father, data = subset(Galton, sex == "M"))
 ```
 
 Extract the function ... just like `resid( )` or `fitted( )` 
@@ -65,42 +65,42 @@ hfun <- makeFun(hmod)
 
 Plot it ... first data, then the function.
 ```{r}
-xyplot(height ~ father | sex, data=Galton)
-plotFun( hfun(x) ~ x, add=TRUE)
+xyplot(height ~ father | sex, data = Galton)
+plotFun( hfun(x) ~ x, add = TRUE)
 ```
 
 ### Multiple variables:
 ```{r}
-mod2 <- lm( height ~ father + sex, data=Galton)
+mod2 <- lm( height ~ father + sex, data = Galton)
 hfun2 <- makeFun(mod2)
-xyplot(height ~ father | sex, data=Galton)
-plotFun( hfun2(x, sex="F") ~ x, add=TRUE)
-plotFun( hfun2(x, sex="M") ~ x, add=TRUE, col='red')
+xyplot(height ~ father | sex, data = Galton)
+plotFun( hfun2(x, sex="F") ~ x, add = TRUE)
+plotFun( hfun2(x, sex="M") ~ x, add = TRUE, col = "red")
 ```
 
 Or ...
 ```{r}
-mod3 <- lm( height ~ father*mother + sex, data=Galton)
+mod3 <- lm( height ~ father * mother + sex, data = Galton)
 hfun3 <- makeFun(mod3)
-plotFun( hfun3(father=x, mother=y, sex="F") ~ x&y,
-         x.lim=c(60,80),y.lim=c(57,73)) 
-plotPoints( mother ~ father, data=Galton, add=TRUE,
-            pch=20,col='red')
+plotFun( hfun3(father = x, mother = y, sex = "F") ~ x & y,
+         x.lim = c(60, 80), y.lim = c(57, 73)) 
+plotPoints( mother ~ father, data = Galton, add=TRUE,
+            pch = 20, col = "red")
 ```
 
 ## Confidence Intervals
 
 ```{r}
-hfun2( father=66, sex=c('M','F'), interval='confidence')
-hfun2( father=66, sex=c('M','F'), interval='prediction')
+hfun2( father = 66, sex = c('M', 'F'), interval = 'confidence')
+hfun2( father = 66, sex = c('M', 'F'), interval = 'prediction')
 ```
 
 ## NOTE: ggplot( ) does this well.
 
 ```{r}
-ggplot(data=Galton, aes(x=father, y=height)) + geom_point()  + 
-  aes(colour=sex)  + stat_smooth(method=lm) + 
-  theme(legend.position="none") + labs(title="") 
+ggplot(data = Galton, aes(x = father, y = height)) + geom_point()  + 
+  aes(colour = sex)  + stat_smooth(method = lm) + 
+  theme(legend.position = "none") + labs(title = "") 
 ```
 
 Convenient interface via `mosaic:mPlot()`.
@@ -108,6 +108,7 @@ Convenient interface via `mosaic:mPlot()`.
 ![mplot](Figures/mPlot.png)
 
 ## Not so brief introduction
+
 One of the objectives of Project MOSAIC is to make connections between statistics and mathematics and computation.  The `mosaic` package offers some features specifically oriented to doing math.  
 
 These are suggestions or demonstrations appropriate in teaching statistical modeling to students not afraid of math, e.g. engineers, statistics minors, ...

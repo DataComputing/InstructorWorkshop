@@ -11,7 +11,7 @@ output:
 
 #### Monday January 11, 2016
 
-* 9:00AM           coffee
+* 9:00am           coffee
 * 9:30-11:30     instructional session
     - The R ecosystem: RStudio, RMD, `mosaic`, `dplyr`, `ggplot2`, ...
     - Statistical modeling
@@ -30,7 +30,7 @@ output:
 
 #### Tuesday January 2, 2016
 
-* 9:00AM           coffee
+* 9:00am           coffee
 * 9:30-11:30     instructional session
     - More data wrangling techniques
     - Data scraping
