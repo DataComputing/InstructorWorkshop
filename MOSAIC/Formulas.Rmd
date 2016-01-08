@@ -1,0 +1,25 @@
+---
+title: "Modeling & Formula"
+author: "Data Computing Instructor Workshop"
+date: "January 7, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Fire-control computer on a Fletcher-class destroyer (c 1943):
+
+* From the director (sighting the target)
+range
+change of range
+bearing
+rate of changes in deflection and elevation
+
+wind
+humidity
+own-ship's course and speed
+condition of the guns (cold, hot, number of rounds fired)
+
+Source: C. Snelling Robinson (2000) 200,000 Miles aboard the Destroyer Cotton 

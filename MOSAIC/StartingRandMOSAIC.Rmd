@@ -218,7 +218,7 @@ Almost everything you will see in R will be one of these:
 
 ## Your Turn
 
-Identify the R language roles of each component in the following expressions:
+1. Identify the R language roles of each component in the following expressions:
 
 
 ```{r}
@@ -235,7 +235,18 @@ xyplot(height ~ father | sex, data = Galton)
 plotFun( hfun(x) ~ x, add = TRUE)
 ```
 
+2. Consider this command chain:
 
+```{r}
+Princes <- 
+  BabyNames %>%
+  filter(grepl("Prince",name)) %>%
+  group_by(year) %>%
+  summarise(total = sum(count))
+```
+Just from the syntax, you should be able to tell which of the five different kinds of object each of these things is: `Princes`, `BabyNames`, `filter`, `grepl`, `"Prince"`, `name`, `group_by`, `year`, `summarise`, `total`, `sum`, `count`.
+
+Explain your reasoning.
 
 ## Micro-languages
 
