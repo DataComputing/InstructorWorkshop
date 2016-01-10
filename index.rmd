@@ -5,10 +5,11 @@ output:
     theme: spacelab
 ---
 
+<!--
 # To do
 
-1. Finish `Formulas.Rmd`
 2. Index-card handout about Parts of Speech
+-->
 
 ### New College of Florida
 
