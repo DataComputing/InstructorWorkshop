@@ -1,5 +1,5 @@
 ---
-title: "Modeling & Formula"
+title: "Modeling & Model Formulas"
 author: "Data Computing Instructor Workshop"
 date: "January 7, 2016"
 output: html_document
@@ -9,17 +9,58 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# What is statistics?
+
+* [Dictionary](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=What+is+statistics%3F)
+    > stəˈtistiks, noun    
+    > the practice or science of collecting and analyzing numerical data in large quantities, especially for the purpose of inferring proportions in a whole from those in a representative sample.
+* [ASA](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0ahUKEwj0o5_o4J3KAhUM6CYKHQQgCx0QFggmMAE&url=http%3A%2F%2Fwww.amstat.org%2Fcareers%2Fwhatisstatistics.cfm&usg=AFQjCNEy0X95H0sKsb7t4b2BjC8jG7bx9A&sig2=8b-gRg44n0b9xrKTs5k8nA)
+    > Statistics is the science of learning from data, and of measuring, controlling, and communicating uncertainty; and it thereby provides the navigation essential for controlling the course of scientific and societal advances (Davidian, M. and Louis, T. A., 10.1126/science.1218685).
+* [FSU updated 7/8/2010](http://stat.fsu.edu/undergrad/statinf2.php)
+    > Statistics is the mathematical science involved in the application of quantitative principles to the collection, analysis, and presentation of numerical data. The practice of statistics utilizes data from some population in order to describe it meaningfully, to draw conclusions from it, and make informed decisions. The population may be a community, an organization, a production line, a service counter, or a phenomenon such as the weather. Statisticians determine which quantitative model is correct for a given type of problem and they decide what kinds of data should be collected and examined.
+* [YouTube](https://www.youtube.com/watch?v=ooOdP1BJxLg) at 1:30s
+
+# Descriptive Statistics
+
+* [Wikipedia entry](https://en.wikipedia.org/wiki/Descriptive_statistics)
+* Khan Academy: Descriptive statistics    
+    > Measures of central tendency and dispersion. Mean, median, mode, variance, and standard deviation.
+    - Measures of central tendency
+        > This is the foundational tutorial for the rest of statistics. We start thinking about how you can represent a set of numbers with one number that somehow represents the "center". We then talk about the differences between populations, samples, parameters and statistics.
+
+
+## Beyond means and proportions
+
+Introductory statistics is usually presented in terms of easy-to-calculate quantities,
+
+* sample means
+* sample proportions
+
+and two slightly harder-to-calculate quantities:
+
+* intercept and slope of a line
+
+## What's easy to calculate has changed
+
+We can now calculate just about whatever we want.
+
+## Example
+
 Fire-control computer on a Fletcher-class destroyer (c 1943):
 
 * From the director (sighting the target)
-range
-change of range
-bearing
-rate of changes in deflection and elevation
-
-wind
-humidity
-own-ship's course and speed
-condition of the guns (cold, hot, number of rounds fired)
+- range
+- change of range
+- bearing
+- rate of changes in deflection and elevation
+* From sensors
+- wind
+- humidity
+- own-ship's course and speed
+- condition of the guns (cold, hot, number of rounds fired)
 
 Source: C. Snelling Robinson (2000) 200,000 Miles aboard the Destroyer Cotton 
+
+## Swimming Records
+
+Fit some models, convert them to functions, plot them, ...

@@ -175,7 +175,16 @@ After1950 <-
   tally()
 ```
 
-## Important things in the R language
+
+## Parts of Speech
+
+From the dictionarty
+> part of speech *noun*
+
+> plural noun: parts of speech
+> a category to which a word is assigned in accordance with its syntactic functions. In English the main parts of speech are noun, pronoun, adjective, determiner, verb, adverb, preposition, conjunction, and interjection.
+
+## Parts of Speech in R
 
 Almost everything you will see in R will be one of these:
 
@@ -218,7 +227,7 @@ Almost everything you will see in R will be one of these:
 
 ## Your Turn
 
-1. Identify the R language roles of each component in the following expressions:
+1. Identify the R part of speech of each component in the following expressions:
 
 
 ```{r}
@@ -251,6 +260,7 @@ Explain your reasoning.
 ## Micro-languages
 
 A subset of R with a clear, consistent syntax suited to a particular task.    
+
 * Speeds up learning.
 * Allows the user to generalize old patterns to new tasks.
 

@@ -5,7 +5,10 @@ output:
     theme: spacelab
 ---
 
+# To do
 
+1. Finish `Formulas.Rmd`
+2. Index-card handout about Parts of Speech
 
 ### New College of Florida
 
@@ -16,17 +19,18 @@ output:
     - The R ecosystem: RStudio, RMD, `mosaic`, `dplyr`, `ggplot2`, ...
         - [Notes](MOSAIC/StartingRandMOSAIC.html) and their [Rmd sources](MOSAIC/StartingRandMOSAIC.Rmd)
         - Article about teaching [reproducibility in economics](Ball-Medeiros-JEE.pdf)
+        - Activity: The library catalog at Macalester College [Handouts](Handouts/small-project-library-books.pdf). ^[For a more detailed exploration, see [Handouts](Handouts/Library-Resource-Use.pdf). The data file is for the whole library collection is at `http://tiny.cc/dcf/Inventory.rda`. Size: 35 MB.]
     - Modeling, Resampling and Inference
-        - Model Formulas [notes]() NEED TO WRITE THESE based on Swimming data
+        - Model Formulas [notes](Formulas.html)
             - Make an index-card handout about language roles.
         - Activity: Total and partial change exercise [notes](MOSAIC/partial-change-activity.html) 
-        - Quick start on inference [notes](Modeling.html) NEED TO SHORTEN THESE
-    - Grammar of Graphics [notes](file:///Users/kaplan/KaplanFiles/DataComputing/DataComputing-Instructors/ClassNotes/VisualizationConcepts.html)
+        - Quick start on inference [notes](Modeling.html) 
+    - Grammar of Graphics [notes](Handouts/VisualizationConcepts.html)
         - Activity: Eye training for grammar [PDF handout](eye-training.pdf) 
 * 11:30-1:00     *Lunch (catered)*
 * 1:00-2:30      Instructional session
-    - Tidy data [notes](file:///Users/kaplan/KaplanFiles/DataComputing/DataComputing-Instructors/ClassNotes/tidy_data.html) and [group activity](file:///Users/kaplan/KaplanFiles/DataComputing/DataComputing-Instructors/ClassNotes/TidyDataActivities.html)
-    - Basics of wrangling with `dplyr` [notes on data verbs](file:///Users/kaplan/KaplanFiles/DataComputing/DataComputing-Instructors/ClassNotes/Verbs.html)
+    - Tidy data [notes](Handouts/tidy_data.html) and [group activity](Handouts/TidyDataActivities.html)
+    - Basics of wrangling with `dplyr` [notes on data verbs](Handouts/Verbs.html)
     - Glyph-ready data
         - Activity: Baby names over the years. [Handout as Rmd file](WhatHappenedToJane.Rmd). Copy this to a document in your session and fill in the `????` blanks.
         - [more notes on `ggplot`](http://dtkaplan.github.io/CVC/Summer2015/Learn/ggplot/ggplot2Intro.pdf)
@@ -41,13 +45,13 @@ output:
 
 * 9:00am         *Coffee*
 * 9:30-11:30     Instructional session
-    - More data wrangling techniques: [notes on joins](file:///Users/kaplan/KaplanFiles/DataComputing/DataComputing-Instructors/ClassNotes/Joins.html), and [wide vs narrow](file:///Users/kaplan/KaplanFiles/DataComputing/DataComputing-Instructors/ClassNotes/Wide-vs-Narrow.html)
+    - More data wrangling techniques: [notes on joins](Handouts/Joins.html), and [wide vs narrow](Handouts/Wide-vs-Narrow.html)
     - Importing data [notes](http://dtkaplan.github.io/CVC/Summer2015/Learn/ImportingData/ImportingData.html).  See also [Gapminder data](http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/TidyGapMinder.html)
     - Data scraping
 * 11:30-1:00     *Lunch (catered)*
 * 1:00-2:30       Instructional session
     - Data cleaning. [Zebrafish example](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/ZebrafishRmd.html) from [CVC notes](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/WranglingQuickStart.html)
-    - Tree-based models [notes](file:///Users/kaplan/KaplanFiles/DataComputing/DataComputing-Instructors/ClassNotes/ManyVariables.html)
+    - Tree-based models [notes](Handouts/ManyVariables.html)
 * 2:30-3:00        *Break*
 * 3:30-4:30        Working on your project
  
