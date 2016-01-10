@@ -72,7 +72,7 @@ punctuation <- c(".", ",", ";", ":", "?", "!", '"',
                 "'", "&", "-", "(", ")", "[", "]")
 for (symbol in punctuation) {
   result <- paste0(" ", symbol, " ")
-  tmp <- gsub(simple, result, tmp, fixed=TRUE )
+  tmp <- gsub(symbol, result, tmp, fixed=TRUE )
 }
 # Step 2
 Words <- unlist(strsplit(tmp, split = " "))

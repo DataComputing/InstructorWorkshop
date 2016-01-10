@@ -21,10 +21,11 @@ output:
         - Article about teaching [reproducibility in economics](Ball-Medeiros-JEE.pdf)
         - Activity: The library catalog at Macalester College [Handouts](Handouts/small-project-library-books.pdf). ^[For a more detailed exploration, see [Handouts](Handouts/Library-Resource-Use.pdf). The data file is for the whole library collection is at `http://tiny.cc/dcf/Inventory.rda`. Size: 35 MB.]
     - Modeling, Resampling and Inference
-        - Model Formulas [notes](Formulas.html)
-            - Make an index-card handout about language roles.
+        - Model Formulas [notes](MOSAIC/Formulas.html)
         - Activity: Total and partial change exercise [notes](MOSAIC/partial-change-activity.html) 
-        - Quick start on inference [notes](Modeling.html) 
+        - Quick start on inference 
+            - `resample()`, `shuffle()`, `do()`, `confint()`, `summary()`
+            - Some additional [notes](MOSAIC/Modeling.html) 
     - Grammar of Graphics [notes](Handouts/VisualizationConcepts.html)
         - Activity: Eye training for grammar [PDF handout](eye-training.pdf) 
 * 11:30-1:00     *Lunch (catered)*
@@ -32,8 +33,8 @@ output:
     - Tidy data [notes](Handouts/tidy_data.html) and [group activity](Handouts/TidyDataActivities.html)
     - Basics of wrangling with `dplyr` [notes on data verbs](Handouts/Verbs.html)
     - Glyph-ready data
-        - Activity: Baby names over the years. [Handout as Rmd file](WhatHappenedToJane.Rmd). Copy this to a document in your session and fill in the `????` blanks.
-        - [more notes on `ggplot`](http://dtkaplan.github.io/CVC/Summer2015/Learn/ggplot/ggplot2Intro.pdf)
+        - Activity: Baby names over the years. [Handout as Rmd file](WhatHappenedToJane.html). Copy this to a document in your session and fill in the `????` blanks.
+        - [more notes on `ggplot`](http://dtkaplan.github.io/CVC/Summer2015/Learn/ggplot2/ggplot2Intro.pdf)
     - Treating text as text. [Moby Dick](MobyDick/notes.html)
 * 2:30-3:00        break
 * 3:30-4:30        workshop
