@@ -19,49 +19,60 @@ output:
 * 9:30-11:30     Instructional session
     - The R ecosystem: RStudio, RMD, `mosaic`, `dplyr`, `ggplot2`, ...
         - [Notes](MOSAIC/StartingRandMOSAIC.html) and their [Rmd sources](MOSAIC/StartingRandMOSAIC.Rmd)
-
-    - Grammar of Graphics [notes](Handouts/VisualizationConcepts.html)
-        - Activity: Eye training for grammar [PDF handout](eye-training.pdf) 
+        
 * 11:30-1:00     *Lunch (catered)*
+
 * 1:00-2:30      Instructional session
+    - Writing data-savvy documents in R/Markdown
         - Article about teaching [reproducibility in economics](Ball-Medeiros-JEE.pdf)
         - Activity: The library catalog at Macalester College [Handouts](Handouts/small-project-library-books.pdf). ^[For a more detailed exploration, see [Handouts](Handouts/Library-Resource-Use.pdf). The data file is for the whole library collection is at `http://tiny.cc/dcf/Inventory.rda`. Size: 35 MB.]
-    - Modeling, Resampling and Inference
+    - Statistics and Modeling
         - Model Formulas [notes](MOSAIC/Formulas.html)
-        - Activity: Total and partial change exercise [notes](MOSAIC/partial-change-activity.html) 
-        - Quick start on inference 
-            - `resample()`, `shuffle()`, `do()`, `confint()`, `summary()`
-            - Some additional [notes](MOSAIC/Modeling.html) 
-
-
-
-
+        - On your own Activity: Total and partial change exercise [notes](MOSAIC/partial-change-activity.html) 
     - Tidy data [notes](Handouts/tidy_data.html) and [group activity](Handouts/TidyDataActivities.html)
-    - Basics of wrangling with `dplyr` [notes on data verbs](Handouts/Verbs.html)
-    - Glyph-ready data
-        - Activity: Baby names over the years. [Handout as Rmd file](WhatHappenedToJane.html). Copy this to a document in your session and fill in the `????` blanks.
-        - [more notes on `ggplot`](http://dtkaplan.github.io/CVC/Summer2015/Learn/ggplot2/ggplot2Intro.pdf)
-    - Treating text as text. [Moby Dick](MobyDick/notes.html)
+
+
 * 2:30-3:00        break
 * 3:30-4:30        workshop
-    - Identifying your own project or working on one from the book.
-    - How much is a fireplace worth? ^[Maybe less in FL than MN!] [PDF handout](MOSAIC/UntanglingHousePrices.pdf)
+    -Resampling and Inference
+        - `resample()`, `shuffle()`, `do()`, `confint()`, `summary()`
+            - Some additional [notes](MOSAIC/Modeling.html)
+    - Describing areas of interest
+
 
 
 #### Tuesday January 2, 2016
 
 * 9:00am         *Coffee*
+
 * 9:30-11:30     Instructional session
+    - Grammar of Graphics [notes](Handouts/VisualizationConcepts.html)
+        - Activity: Eye training for grammar [PDF handout](eye-training.pdf) 
+    - Basics of wrangling with `dplyr` [notes on data verbs](Handouts/Verbs.html)
+    - Glyph-ready data
+        - Activity: Baby names over the years. [Handout as Rmd file](WhatHappenedToJane.html). Copy this to a document in your session and fill in the `????` blanks.
+        - [more notes on `ggplot`](http://dtkaplan.github.io/CVC/Summer2015/Learn/ggplot2/ggplot2Intro.pdf)
+
+* 11:30-1:00     *Lunch (catered)*
+* 1:00-2:30       Instructional session
     - More data wrangling techniques: [notes on joins](Handouts/Joins.html), and [wide vs narrow](Handouts/Wide-vs-Narrow.html)
     - Importing data [notes](http://dtkaplan.github.io/CVC/Summer2015/Learn/ImportingData/ImportingData.html).  See also [Gapminder data](http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/TidyGapMinder.html)
     - Data scraping
-* 11:30-1:00     *Lunch (catered)*
-* 1:00-2:30       Instructional session
-    - Data cleaning. [Zebrafish example](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/ZebrafishRmd.html) from [CVC notes](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/WranglingQuickStart.html)
-    - Tree-based models [notes](Handouts/ManyVariables.html)
+
+
 * 2:30-3:00        *Break*
 * 3:30-4:30        Working on your project
  
+#### for the Future
+
+* Topics
+    - Data cleaning. [Zebrafish example](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/ZebrafishRmd.html) from [CVC notes](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/WranglingQuickStart.html)
+    - Tree-based models [notes](Handouts/ManyVariables.html)
+    - Treating text as text. [Moby Dick](MobyDick/notes.html)
+* How much is a fireplace worth? ^[Maybe less in FL than MN!] [PDF handout](MOSAIC/UntanglingHousePrices.pdf)
+
+
+
 <footer>
 <ul>
 <li><a href="https://github.com/DataComputing/InstructorWorkshop/zipball/master">Download <strong>ZIP File</strong></a></li>
