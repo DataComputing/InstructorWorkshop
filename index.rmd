@@ -19,6 +19,11 @@ output:
 * 9:30-11:30     Instructional session
     - The R ecosystem: RStudio, RMD, `mosaic`, `dplyr`, `ggplot2`, ...
         - [Notes](MOSAIC/StartingRandMOSAIC.html) and their [Rmd sources](MOSAIC/StartingRandMOSAIC.Rmd)
+
+    - Grammar of Graphics [notes](Handouts/VisualizationConcepts.html)
+        - Activity: Eye training for grammar [PDF handout](eye-training.pdf) 
+* 11:30-1:00     *Lunch (catered)*
+* 1:00-2:30      Instructional session
         - Article about teaching [reproducibility in economics](Ball-Medeiros-JEE.pdf)
         - Activity: The library catalog at Macalester College [Handouts](Handouts/small-project-library-books.pdf). ^[For a more detailed exploration, see [Handouts](Handouts/Library-Resource-Use.pdf). The data file is for the whole library collection is at `http://tiny.cc/dcf/Inventory.rda`. Size: 35 MB.]
     - Modeling, Resampling and Inference
@@ -27,10 +32,10 @@ output:
         - Quick start on inference 
             - `resample()`, `shuffle()`, `do()`, `confint()`, `summary()`
             - Some additional [notes](MOSAIC/Modeling.html) 
-    - Grammar of Graphics [notes](Handouts/VisualizationConcepts.html)
-        - Activity: Eye training for grammar [PDF handout](eye-training.pdf) 
-* 11:30-1:00     *Lunch (catered)*
-* 1:00-2:30      Instructional session
+
+
+
+
     - Tidy data [notes](Handouts/tidy_data.html) and [group activity](Handouts/TidyDataActivities.html)
     - Basics of wrangling with `dplyr` [notes on data verbs](Handouts/Verbs.html)
     - Glyph-ready data

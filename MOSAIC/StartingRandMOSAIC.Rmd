@@ -2,9 +2,7 @@
 title: Starting R and MOSAIC 
 author: R Pruim & D Kaplan
 date: "Data Computing Instructors' Workshop"
-output: 
-  ioslides_presentation:
-    widescreen: true
+output: slidy_presentation
 ---
 
 
