@@ -29,7 +29,7 @@ output:
     - Statistics and Modeling
         - Model Formulas [notes](MOSAIC/Formulas.html)
         - On your own Activity: Total and partial change exercise [notes](MOSAIC/partial-change-activity.html) 
-    - Tidy data [notes](Handouts/tidy_data.html) and [group activity](Handouts/TidyDataActivities.html)
+
 
 
 * 2:30-3:00        break
@@ -66,6 +66,7 @@ output:
 #### for the Future
 
 * Topics
+    - Tidy data [notes](Handouts/tidy_data.html) and [group activity](Handouts/TidyDataActivities.html)
     - Data cleaning. [Zebrafish example](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/ZebrafishRmd.html) from [CVC notes](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/WranglingQuickStart.html)
     - Tree-based models [notes](Handouts/ManyVariables.html)
     - Treating text as text. [Moby Dick](MobyDick/notes.html)
