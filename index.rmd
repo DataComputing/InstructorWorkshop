@@ -46,6 +46,7 @@ output:
 * 9:00am         *Coffee*
 
 * 9:30-11:30     Instructional session
+    - Tidy data [notes](Handouts/tidy_data.html) and [group activity](Handouts/TidyDataActivities.html)
     - Grammar of Graphics [notes](Handouts/VisualizationConcepts.html)
         - Activity: Eye training for grammar [PDF handout](eye-training.pdf) 
     - Basics of wrangling with `dplyr` [notes on data verbs](Handouts/Verbs.html)
@@ -55,6 +56,7 @@ output:
 
 * 11:30-1:00     *Lunch (catered)*
 * 1:00-2:30       Instructional session
+    - Treating text as text. [Moby Dick](MobyDick/notes.html)
     - More data wrangling techniques: [notes on joins](Handouts/Joins.html), and [wide vs narrow](Handouts/Wide-vs-Narrow.html)
     - Importing data [notes](http://dtkaplan.github.io/CVC/Summer2015/Learn/ImportingData/ImportingData.html).  See also [Gapminder data](http://dtkaplan.github.io/CVC/Summer2015/Learn/TidyData/TidyGapMinder.html)
     - Data scraping
@@ -66,10 +68,9 @@ output:
 #### for the Future
 
 * Topics
-    - Tidy data [notes](Handouts/tidy_data.html) and [group activity](Handouts/TidyDataActivities.html)
     - Data cleaning. [Zebrafish example](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/ZebrafishRmd.html) from [CVC notes](http://dtkaplan.github.io/CVC/Summer2015/Learn/Wrangling/WranglingQuickStart.html)
     - Tree-based models [notes](Handouts/ManyVariables.html)
-    - Treating text as text. [Moby Dick](MobyDick/notes.html)
+
 * How much is a fireplace worth? ^[Maybe less in FL than MN!] [PDF handout](MOSAIC/UntanglingHousePrices.pdf)
 
 
